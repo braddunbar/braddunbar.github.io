@@ -1,0 +1,105 @@
+
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0;
+border: 0; font-size: 100%; font: inherit;
+vertical-align: baseline; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+html {
+  font-size: 100%;
+  background: url('../img/paisley-texture.jpg') #ccc;
+  background-attachment: fixed;
+}
+
+body { margin: 0 auto; width: 46.25em; font-size: 1em; }
+
+.content {
+  padding-bottom: 2em;
+  background: #fff;
+  -webkit-box-shadow: 0 0 .25em .25em #aaa; box-shadow: 0 0 .25em .25em #aaa;
+  -webkit-border-radius: .25em; border-radius: .25em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+h1, h2 { font-family: 'Six Caps', Helvetica, Arial, sans-serif; font-weight: normal; }
+h3, h4, h5, h6 { font-family: Helvetica, Arial, sans-serif; }
+
+h1 { font-size: 5em; }
+h2 { font-size: 3em; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: inherit; }
+
+a { color: inherit; }
+a:hover { color: red; }
+
+p img {
+  background: #fff;
+  -webkit-box-shadow: 0 0 .125em .125em #aaa; box-shadow: 0 0 .125em .125em #aaa;
+  -webkit-border-radius: .125em; border-radius: .125em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+p { margin: 0 0 1em 0; line-height: 1.5; font-size: 1.25em; }
+p code {
+  padding: 0 .25em 0 .25em;
+  background: #ddd;
+  -webkit-border-radius: .125em; border-radius: .125em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+pre {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: .125em .5em .125em .5em;
+  padding: .5em;
+  -webkit-border-radius: .25em; border-radius: .25em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  font-family: monospace; font-size: 1.25em; line-height: 1.5; margin: 0 0 1em 0;
+}
+
+section { position: relative; border-bottom: solid .125em #ddd; }
+section:before {
+  content: '\00a7';
+  position: absolute;
+  left: 50%;
+  bottom: -.5em;
+  font-family: 'Six Caps';
+  font-size: 3em;
+  color: #ccc;
+}
+
+article { padding: 2em; }
+header { margin: 0 0 2em 0; }
+footer { margin: 2em 0 0 0; }
+
+blockquote {
+  font-style: italic;
+  border-left: solid .5em #ccc;
+  padding-left: .5em;
+  -webkit-border-radius: .25em; border-radius: .25em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.text-center { text-align: center; }

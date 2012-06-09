@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf8'>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Six+Caps'>
+  <link rel='stylesheet' href='/css/screen.css'>
+</head>
+<body>
+  <header>
+    <h1 class='text-center'><a href='/'>Brad Dunbar</a></h1>
+  </header>
+  <div class='content'>
+    {{ content }}
+  </div>
+  <footer class='text-center'>
+    <p>
+      &copy; 2012 brad dunbar |
+      <a href='http://github.com/braddunbar/braddunbar.github.com'>source</a>
+    </p>
+  </footer>
+</body>
+</html>

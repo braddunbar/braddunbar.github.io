@@ -1,0 +1,4 @@
+safe: true
+title: Brad Dunbar
+permalink: /:year/:month/:day/:title
+paginate: 10
