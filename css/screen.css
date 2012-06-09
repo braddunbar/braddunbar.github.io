@@ -57,6 +57,7 @@ a { color: inherit; }
 a:hover { color: red; }
 
 p img {
+  max-width: 20em;
   background: #fff;
   -webkit-box-shadow: 0 0 .125em .125em #aaa; box-shadow: 0 0 .125em .125em #aaa;
   -webkit-border-radius: .125em; border-radius: .125em;
