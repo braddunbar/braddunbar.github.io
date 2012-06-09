@@ -33,9 +33,11 @@ html {
   background-attachment: fixed;
 }
 
-body { margin: 0 auto; width: 46.25em; font-size: 1em; }
+body { font-size: 1em; }
 
 .content {
+  margin: 0 auto;
+  width: 46.25em;
   padding-bottom: 2em;
   background: #fff;
   -webkit-box-shadow: 0 0 .25em .25em #aaa; box-shadow: 0 0 .25em .25em #aaa;
@@ -70,6 +72,7 @@ p code {
 }
 
 pre {
+  overflow: auto;
   border-color: #ccc;
   border-style: solid;
   border-width: .125em .5em .125em .5em;
