@@ -94,6 +94,8 @@ section:before {
 }
 
 article { padding: 2em; }
+article header time { float: right; color: #aaa; }
+
 header { margin: 0 0 2em 0; }
 footer { margin: 2em 0 0 0; }
 

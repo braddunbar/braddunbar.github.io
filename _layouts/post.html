@@ -4,6 +4,9 @@ layout: default
 
 <article>
   <header>
+    <time datetime='{{ page.date }}' title='{{ page.date }}'>
+      {{ page.date | date: '%b %d, %Y' }}
+    </time>
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
   </header>
   {{ content }}
