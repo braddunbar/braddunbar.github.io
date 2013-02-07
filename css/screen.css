@@ -40,7 +40,6 @@ body { font-size: 1em; }
   width: 37.5em;
   padding-bottom: 2em;
   background: #fff;
-  -webkit-box-shadow: 0 0 .25em .25em #aaa; box-shadow: 0 0 .25em .25em #aaa;
   -webkit-border-radius: .25em; border-radius: .25em;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
@@ -59,7 +58,6 @@ a:hover { color: red; }
 p img {
   max-width: 20em;
   background: #fff;
-  -webkit-box-shadow: 0 0 .125em .125em #aaa; box-shadow: 0 0 .125em .125em #aaa;
   -webkit-border-radius: .125em; border-radius: .125em;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
@@ -67,24 +65,27 @@ p img {
 p { margin: 0 0 1em 0; line-height: 1.5; font-size: 1.25em; }
 p code {
   padding: 0 .25em 0 .25em;
-  background: #ddd;
+  background: #eee;
+  font-family: monospace;
   -webkit-border-radius: .125em; border-radius: .125em;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
 pre {
   overflow: auto;
-  border-color: #ccc;
-  border-style: solid;
-  border-width: .125em .5em .125em .5em;
+  border-left: solid .5em #ddd;
   padding: .5em;
-  -webkit-border-radius: .25em; border-radius: .25em;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-  font-family: monospace; font-size: 1.25em; line-height: 1.5; margin: 0 0 1em 0;
+  font-family: monospace;
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
 }
 
-section { position: relative; border-bottom: solid .125em #ddd; }
-section:before {
+section:not(:last-child) {
+  position: relative;
+  border-bottom: solid .125em #ddd;
+}
+section:not(:last-child):before {
   content: '\00a7';
   position: absolute;
   left: 50%;
@@ -102,10 +103,8 @@ footer { margin: 2em 0 0 0; }
 
 blockquote {
   font-style: italic;
-  border-left: solid .5em #ccc;
-  padding-left: .5em;
-  -webkit-border-radius: .25em; border-radius: .25em;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  padding: 1em;
+  margin: 0 0 1em 0;
 }
 
 .text-center { text-align: center; }
