@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Persistence
+layout: post
 ---
 
 [Dave Winer][scripting] succintly states my feelings on collaborative software development in a quote from [Ars Technica][article].
