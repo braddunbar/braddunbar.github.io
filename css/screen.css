@@ -89,6 +89,7 @@ section:not(:last-child):before {
 }
 
 article { padding: 2em; }
+article img { max-width: 80%; }
 article header time { float: right; color: #aaa; }
 
 header { margin: 0 0 2em 0; }
