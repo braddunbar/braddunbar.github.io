@@ -23,33 +23,8 @@ Hopefully I've saved you the debugging time I've lost today.  ;)
 
 I filed [a bug][bug] concerning this behavior on the jQuery issue tracker,
 but it can't be fixed due to performance considerations (more details in
-[the ticket][bug]).  However, a patch for this behavior is rather easy to
-implement yourself.  I've been using the following in projects where this
-causes issues:
-
-    (function($) {
-
-      // Feature test in order to avoid the performance
-      // penalty in safe browsers.
-      var safe = (function() {
-        var p = $('<p><a> </a></p>');
-        var a = p.find('a');
-        p.html('');
-        return !!a.html();
-      })();
-
-      if (safe) return;
-
-      var html = $.fn.html;
-
-      // Monkey patch $.fn.html
-      $.fn.html = function(value) {
-        return value === undefined ?
-          html.apply(this, arguments) :
-          this.empty().append(value);
-      };
-
-    })(jQuery);
+[the ticket][bug]).  That said, working around the issue by using
+`.empty().append(…)` is easy to do.
 
 [fiddle]: http://jsfiddle.net/Hej6h/6/
 [bug]: http://bugs.jquery.com/ticket/11473
