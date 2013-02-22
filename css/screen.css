@@ -29,6 +29,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 html { font-size: 100%; }
 body { font-size: 1em; }
 
+hr { border: solid .0625em #000; }
+
 .content {
   margin: 0 auto;
   max-width: 37.5em;
