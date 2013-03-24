@@ -95,7 +95,7 @@ section:not(:last-child):before {
   color: #ccc;
 }
 
-article { padding: 1em 2em 1em 2em; }
+article { padding: 1em; }
 article img { max-width: 80%; }
 article aside { max-width: 40%; }
 article header { margin: 0 0 1em 0; }
