@@ -37,10 +37,10 @@ hr { border: solid .0625em #000; }
   padding-bottom: 2em;
 }
 
-.site-nav {
-  padding: 0 .25em 0 .25em;
-  text-align: right;
-}
+.site-header { text-align: right; border-bottom: solid 1px #000; }
+.site-header h1 { display: inline; }
+.site-header nav { display: inline; }
+.site-header nav a { padding: 0 .25em 0 .25em; }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Six Caps', Helvetica, Arial, sans-serif; font-weight: normal; }
 
@@ -91,19 +91,19 @@ section:not(:last-child):before {
   left: 50%;
   bottom: -.5em;
   font-family: 'Six Caps';
-  font-size: 3em;
+  font-size: 2em;
   color: #ccc;
 }
 
-article { padding: 2em; }
+article { padding: 1em 2em 1em 2em; }
 article img { max-width: 80%; }
 article aside { max-width: 40%; }
+article header { margin: 0 0 1em 0; }
 article header time { float: right; color: #aaa; }
 
 em { font-style: italic; }
 strong { font-weight: bold; }
 
-header { margin: 0 0 2em 0; }
 footer { margin: 2em 0 0 0; }
 
 blockquote {
