@@ -37,11 +37,16 @@ hr { border: solid .0625em #000; }
   padding-bottom: 2em;
 }
 
-h1, h2 { font-family: 'Six Caps', Helvetica, Arial, sans-serif; font-weight: normal; }
-h3, h4, h5, h6 { font-family: Helvetica, Arial, sans-serif; }
+.site-nav {
+  padding: 0 .25em 0 .25em;
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Six Caps', Helvetica, Arial, sans-serif; font-weight: normal; }
 
 h1 { font-size: 5em; }
 h2 { font-size: 3em; }
+h3 { font-size: 2em; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: inherit; }
 
@@ -92,7 +97,11 @@ section:not(:last-child):before {
 
 article { padding: 2em; }
 article img { max-width: 80%; }
+article aside { max-width: 40%; }
 article header time { float: right; color: #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
 
 header { margin: 0 0 2em 0; }
 footer { margin: 2em 0 0 0; }
@@ -114,4 +123,7 @@ blockquote:before {
   font-size: 15em;
 }
 
+.relative { position: relative; }
 .text-center { text-align: center; }
+.right { float: right; }
+.left { float: left; }
