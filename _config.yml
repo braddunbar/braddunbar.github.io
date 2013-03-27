@@ -1,3 +1,6 @@
 safe: true
-title: Brad Dunbar
-permalink: /:year/:month/:day/:title
+title: 'Brad Dunbar'
+author: 'Brad Dunbar'
+description: 'Programming & Peanut Butter'
+url: 'http://braddunbar.net'
+permalink: '/:year/:month/:day/:title'
