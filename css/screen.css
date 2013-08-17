@@ -42,7 +42,11 @@ hr { border: solid .0625em #000; }
 .site-header nav { display: inline; }
 .site-header nav a { padding: 0 .25em 0 .25em; }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Six Caps', Helvetica, Arial, sans-serif; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Six Caps', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: .5em;
+}
 
 h1 { font-size: 5em; }
 h2 { font-size: 3em; }
