@@ -8,11 +8,13 @@ tags: javascript
 Today I learned (after a long and arduous debugging session) that `innerHTML`
 can have serious side effects when used in Internet Explorer.  Consider the following:
 
-    var p = document.createElement('p');
-    p.innerHTML = '<a>test</a>';
-    a = p.childNodes[0];
-    p.innerHTML = '';
-    console.log(a.innerHTML);
+{% highlight javascript %}
+var p = document.createElement('p');
+p.innerHTML = '<a>test</a>';
+a = p.childNodes[0];
+p.innerHTML = '';
+console.log(a.innerHTML);
+{% endhighlight %}
 
 Here's a [fiddle][fiddle] in case you want to play around with it.  In most
 modern browsers this snippet will happily log `'test'` before continuing about
