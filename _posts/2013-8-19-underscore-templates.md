@@ -98,8 +98,12 @@ only concerned with performance here and the `with` statement makes things
 
 ### Template Context
 
-While, in my experience, under-used, a template is always provided with
-a context, which can be quite useful when rendering your views.
+While, in my experience, under-used, a template is always provided with a
+context, which can be quite useful when rendering your views.  This prevents
+the need to pass a custom data argument to your template, sparing you from
+memorizing yet another application custom API, not to mention creating another
+custom API at all.  This is maybe my favorite unused `_.template` technique but
+has gone unnoticed by most.
 
     var view = {
       x: 7,
