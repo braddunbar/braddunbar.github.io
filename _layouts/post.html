@@ -11,3 +11,15 @@ layout: default
   </header>
   {{ content }}
 </article>
+{% if page.next %}
+  <a class='right' href='{{ page.next.url }}'>
+    {{ page.next.title }}
+    &rarr;
+  </a>
+{% endif %}
+{% if page.previous %}
+  <a class='left' href='{{ page.previous.url }}'>
+    &larr;
+    {{ page.previous.title }}
+  </a>
+{% endif %}
