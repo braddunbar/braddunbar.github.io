@@ -1,0 +1,50 @@
+<!doctype html>
+<canvas id='canvas' width='500' height='500'></canvas>
+<script>
+(function() {
+
+// Grab the context.
+var c = document.getElementById('canvas').getContext('2d');
+
+// Center the origin.
+c.translate(250, 250);
+
+// Clear the canvas.
+function clear() {
+  c.fillStyle = '#fff';
+  c.fillRect(-250, -250, 500, 500);
+}
+
+// Draw a line between two points.
+function drawLine(start, end) {
+  c.beginPath();
+  c.moveTo(start.x, start.y);
+  c.lineTo(end.x, end.y);
+  c.stroke();
+}
+
+// Change in angle per branch.
+var delta = 0;
+
+// Recursively draw branches until they're too small.
+function branch(start, angle, size) {
+  if (size < 2) return;
+  var end = {
+    x: start.x + size * Math.cos(angle),
+    y: start.y - size * Math.sin(angle)
+  };
+  drawLine(start, end);
+  branch(end, angle + delta, size * 2 / 3);
+  branch(end, angle - delta, size * 2 / 3);
+}
+
+// Draw it!
+requestAnimationFrame(function draw() {
+  clear();
+  branch({x: 0, y: 0}, .5 * Math.PI, 75);
+  delta += .015;
+  requestAnimationFrame(draw);
+});
+
+}());
+</script>
