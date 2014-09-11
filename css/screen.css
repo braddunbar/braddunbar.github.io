@@ -27,7 +27,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 html { font-size: 100%; }
-body { font-size: 1em; }
+body { font-size: 1em; background: white; }
 
 hr { border: solid .0625em #000; }
 
