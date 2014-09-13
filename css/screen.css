@@ -1,81 +1,261 @@
 /* reset */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video { margin: 0; padding: 0;
-border: 0; font-size: 100%; font: inherit;
-vertical-align: baseline; }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-display: block; }
-body { line-height: 1; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after,
-q:before, q:after { content: ''; content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
+b,
+u,
+i,
+q,
+s,
+p,
+a,
+tr,
+th,
+td,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+tt,
+nav,
+var,
+sub,
+sup,
+big,
+div,
+pre,
+del,
+dfn,
+img,
+ins,
+kbd,
+cite,
+time,
+mark,
+code,
+abbr,
+html,
+menu,
+body,
+ruby,
+span,
+samp,
+form,
+tbody,
+tfoot,
+thead,
+label,
+small,
+embed,
+aside,
+table,
+audio,
+video,
+canvas,
+applet,
+object,
+iframe,
+strike,
+strong,
+center,
+legend,
+figure,
+footer,
+header,
+hgroup,
+output,
+acronym,
+address,
+caption,
+article,
+details,
+section,
+summary,
+fieldset,
+blockquote,
+figcaption
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+nav,
+menu,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section,
+article,
+details,
+figcaption
+{
+  display: block;
+}
 
-html { font-size: 100%; }
-body { font-size: 1em; background: white; }
+body
+{
+  line-height: 1;
+}
 
-hr { border: solid .0625em #000; }
+ol,
+ul
+{
+  list-style: none;
+}
 
-.content {
+q,
+blockquote
+{
+  quotes: none;
+}
+
+a:after,
+q:before,
+blockquote:after,
+blockquote:before
+{
+  content: '';
+  content: none;
+}
+
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html
+{
+  font-size: 100%;
+}
+
+body
+{
+  font-size: 1em;
+  background: white;
+}
+
+hr
+{
+  border: solid .0625em #000;
+}
+
+.content
+{
   margin: 0 auto;
   max-width: 37.5em;
   padding-bottom: 2em;
 }
 
-.site-header { text-align: right; border-bottom: solid 1px #000; }
-.site-header h1 { display: inline; }
-.site-header nav { display: inline; }
-.site-header nav a { padding: 0 .25em 0 .25em; }
+.site-header
+{
+  text-align: right;
+  border-bottom: solid 1px #000;
+}
 
-h1, h2, h3, h4, h5, h6 {
+.site-header h1
+{
+  display: inline;
+}
+
+.site-header nav
+{
+  display: inline;
+}
+
+.site-header nav a
+{
+  padding: 0 .25em 0 .25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
   font-family: 'Six Caps', Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin-bottom: .5em;
 }
 
-h1 { font-size: 5em; }
-h2 { font-size: 3em; }
-h3 { font-size: 2em; }
+h1
+{
+  font-size: 5em;
+}
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: inherit; }
+h2
+{
+  font-size: 3em;
+}
 
-a { color: inherit; }
-a:hover { color: red; }
+h3
+{
+  font-size: 2em;
+}
 
-p img {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+{
+  text-decoration: inherit;
+}
+
+a
+{
+  color: inherit;
+}
+
+a:hover
+{
+  color: red;
+}
+
+p img
+{
   display: block;
   margin: 0 auto;
   max-width: 20em;
   background: #fff;
-  -webkit-border-radius: .125em; border-radius: .125em;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  border-radius: .125em;
+  background-clip: padding-box;
 }
 
-p { margin: 0 0 1em 0; line-height: 1.5; font-size: 1.25em; }
-p code {
+p
+{
+  margin: 0 0 1em 0;
+  line-height: 1.5;
+  font-size: 1.25em;
+}
+
+p code
+{
   padding: 0 .25em 0 .25em;
   background: #eee;
   font-family: monospace;
-  -webkit-border-radius: .125em; border-radius: .125em;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  border-radius: .125em;
+  background-clip: padding-box;
 }
 
-pre {
+pre
+{
   overflow: auto;
   border-left: solid .5em #ddd;
   padding: .5em;
@@ -85,11 +265,14 @@ pre {
   margin: 0 0 1em 0;
 }
 
-section:not(:last-child) {
+section:not(:last-child)
+{
   position: relative;
   border-bottom: solid .125em #ddd;
 }
-section:not(:last-child):before {
+
+section:not(:last-child):before
+{
   content: '\00a7';
   position: absolute;
   left: 50%;
@@ -99,25 +282,56 @@ section:not(:last-child):before {
   color: #ccc;
 }
 
-article { padding: 1em; }
-article img { max-width: 80%; }
-article aside { max-width: 40%; }
-article header { margin: 0 0 1em 0; }
-article header time { float: right; color: #aaa; }
+article
+{
+  padding: 1em;
+}
 
-em { font-style: italic; }
-strong { font-weight: bold; }
+article img
+{
+  max-width: 80%;
+}
 
-footer { margin: 2em 0 0 0; }
+article aside
+{
+  max-width: 40%;
+}
 
-blockquote {
+article header
+{
+  margin: 0 0 1em 0;
+}
+
+article header time
+{
+  float: right; color: #aaa;
+}
+
+em
+{
+  font-style: italic;
+}
+
+strong
+{
+  font-weight: bold;
+}
+
+footer
+{
+  margin: 2em 0 0 0;
+}
+
+blockquote
+{
   font-style: italic;
   padding: 1em;
   margin: 0 0 1em 0;
   position: relative;
 }
 
-blockquote:before {
+blockquote:before
+{
   z-index: -1;
   content: '\201c';
   position: absolute;
@@ -127,10 +341,23 @@ blockquote:before {
   font-size: 15em;
 }
 
-.relative { position: relative; }
-.text-center { text-align: center; }
-.right { float: right; }
-.left { float: left; }
+.relative
+{
+  position: relative;
+}
+
+.text-center
+{
+  text-align: center;
+}
+.right
+{
+  float: right;
+}
+.left
+{
+  float: left;
+}
 
 /* pygments */
 
