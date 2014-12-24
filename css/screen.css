@@ -307,7 +307,8 @@ article header time
   float: right; color: #aaa;
 }
 
-article audio {
+article audio
+{
   display: block;
   margin: 0 auto 1em auto;
 }

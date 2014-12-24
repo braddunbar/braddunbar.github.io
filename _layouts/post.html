@@ -10,16 +10,18 @@ layout: default
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
   </header>
   {{ content }}
+  <footer>
+    {% if page.next %}
+      <a class='right' href='{{ page.next.url }}'>
+        {{ page.next.title }}
+        &rarr;
+      </a>
+    {% endif %}
+    {% if page.previous %}
+      <a class='left' href='{{ page.previous.url }}'>
+        &larr;
+        {{ page.previous.title }}
+      </a>
+    {% endif %}
+  </footer>
 </article>
-{% if page.next %}
-  <a class='right' href='{{ page.next.url }}'>
-    {{ page.next.title }}
-    &rarr;
-  </a>
-{% endif %}
-{% if page.previous %}
-  <a class='left' href='{{ page.previous.url }}'>
-    &larr;
-    {{ page.previous.title }}
-  </a>
-{% endif %}
