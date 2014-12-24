@@ -315,6 +315,11 @@ article video
   margin: 0 auto 1em auto;
 }
 
+article video
+{
+  border-radius: .125em;
+}
+
 em
 {
   font-style: italic;
