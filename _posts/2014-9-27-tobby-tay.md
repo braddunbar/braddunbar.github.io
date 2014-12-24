@@ -56,6 +56,10 @@ impossible that I would ever forget about it.  But if I could forget all that
 other stuff in a short two years, maybe twenty years is just too much for my
 memory…
 
+<audio controls src='/audio/mary-mary.mp3'>
+  Your browser does't support the audio element.  :(
+</audio>
+
 I read somewhere recently that "One day, you will pick up your child and then
 put them down for the last time."  I think I'm ok with that.  I just hope I
 remember what it was like.
