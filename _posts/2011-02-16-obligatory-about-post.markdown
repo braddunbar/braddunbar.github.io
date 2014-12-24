@@ -13,7 +13,7 @@ Strictly speaking, the peanut butter sandwich part is not relevant. It is,
 however, a good idea and I intend to follow up on it.
 
 [node.js][node] is easily the shiniest thing I've seen in the past few days,
-and all the cool kids are doing it so I figured I'd join in the fun.  So far I
+and all the cool kids are doing it so I figured I'd join in the fun. So far I
 love it although it's not without a few hurdles. Flow control seemed a bit
 [clumsy][clumsy] at first, but as it turns out there are [various libraries][step]
 that make it much cleaner. I'll get into details later when

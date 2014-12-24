@@ -11,7 +11,7 @@ Hopefully I can spare you the same pain. For the Software Tools Philosophy to
 work, one must have a working knowledge of the tools.
 
 Alright, review time. According to `man echo`, it's used to "display a line of
-text".  And so it does! It's quite handy when you need to dump something to
+text". And so it does! It's quite handy when you need to dump something to
 stdout. Especially when that something is literal text.
 
     $ echo cheese and crumpets
@@ -35,7 +35,7 @@ included in `screen.css`:
       content:"\0020"; ...
     }
 
-You'll notice the unicode escape sequence for space (`\0200`).  To `echo` this
+You'll notice the unicode escape sequence for space (`\0200`). To `echo` this
 looks like an escape sequence (and so it is, just not one we'd like to replace)
 and so it replaces it. At this point I can hear you saying "But wait! echo has
 the -E switch for that! It disables interpretation of backslash escape

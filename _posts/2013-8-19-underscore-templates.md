@@ -3,20 +3,20 @@ layout: post
 ---
 
 It has come to my attention that perhaps [Underscore templates][docs] are a bit
-misunderstood.  Or, perhaps, the community is simply unaware of their best
-features and usage.  Either way, I'd like to provide a primer for the
-uninitiated and a knowledge base for the rest.  The goals and benefits of
+misunderstood. Or, perhaps, the community is simply unaware of their best
+features and usage. Either way, I'd like to provide a primer for the
+uninitiated and a knowledge base for the rest. The goals and benefits of
 client side templating have been [explored fairly thoroughly][js-templates] so
 I'll jump right into the good stuff.
 
 There are lots of code examples below, so make sure to play around with anything
-you don't understand.  Just head over to [underscorejs.org](http://underscorejs.org)
+you don't understand. Just head over to [underscorejs.org](http://underscorejs.org)
 and open up the console.
 
 ### Basics
 
 Based loosely on [John Resig's micro-templating][micro-templating], Underscore
-templates should have a fairly familiar feel.  Put in some text with delimeters
+templates should have a fairly familiar feel. Put in some text with delimeters
 for your data, and `_.template` does the substitution for you, easy peasy.
 
 {% highlight javascript %}
@@ -24,8 +24,8 @@ _.template('<p><%= text %></p>', {text: 'o hai!'});
 // <p>o hai!</p>
 {% endhighlight %}
 
-The syntax is flexible so don't rage quit if you dislike `<%= %>`.  You can
-just use different delimiters.  Need to HTML escape your data?  No problem,
+The syntax is flexible so don't rage quit if you dislike `<%= %>`. You can
+just use different delimiters. Need to HTML escape your data?  No problem,
 just use `<%- %>`.
 
 {% highlight javascript %}
@@ -34,7 +34,7 @@ _.template('<%- text %>', {text: '1 < 2'});
 {% endhighlight %}
 
 Underscore templates also happen to be *logical* (as opposed to logic-less),
-allowing you to use whatever crazy javascript you can come up with.  I happen
+allowing you to use whatever crazy javascript you can come up with. I happen
 to enjoy this sort of freedom but if it's not your cup of tea, don't sweat it.
 
 {% highlight javascript %}
@@ -45,7 +45,7 @@ _.template('<% _.times(5, function(i){ %><%- i %><% }); %>', {});
 ### Custom Delimeters
 
 If you'd prefer a different set of delimeters, you can easily provide your own
-regular expressions for interpolating, escaping, and evaluating.  Each regular
+regular expressions for interpolating, escaping, and evaluating. Each regular
 expression must provide exactly one capturing group.
 
 {% highlight javascript %}
@@ -71,7 +71,7 @@ template({text: 'bar'}); // <p>bar</p>
 {% endhighlight %}
 
 You can inspect the template source via the `source` property, which is handy
-for precompiling your templates.  It's crazy fast compared to compiling on each
+for precompiling your templates. It's crazy fast compared to compiling on each
 load and, more importantly, it provides useful line/column numbers in stack
 traces.
 
@@ -90,13 +90,13 @@ _.template('<p><%- text %></p>').source;
 {% endhighlight %}
 
 While it might seem a bit esoteric, viewing the template source is rather
-instructive.  First and foremost, it proves that templates are just javascript,
-no magic involved.  Secondly, it provides for some interesting techniques.
+instructive. First and foremost, it proves that templates are just javascript,
+no magic involved. Secondly, it provides for some interesting techniques.
 
 ### Slow by Default
 
 Since version 1.3.3, underscore templates have been [quite fast][benchmark].
-However, backward compatibility concerns force them to be slow by default.  By
+However, backward compatibility concerns force them to be slow by default. By
 specifying a `variable` to prefix your data with, you can speed things up by an
 order of magnitude.
 
@@ -105,7 +105,7 @@ _.template('<%- data.x %>', null, {variable: 'data'});
 {% endhighlight %}
 
 When a `variable` is not specified, the template source is wrapped in a `with`
-statement.  While there are plenty of [existing
+statement. While there are plenty of [existing
 implications][with-considered-harmful] regarding the `with` statement, we're
 only concerned with performance here and the `with` statement makes things
 *much* slower.
@@ -113,10 +113,10 @@ only concerned with performance here and the `with` statement makes things
 ### Template Context
 
 While, in my experience, under-used, a template is always provided with a
-context, which can be quite useful when rendering your views.  This prevents
+context, which can be quite useful when rendering your views. This prevents
 the need to pass a custom data argument to your template, sparing you from
 memorizing yet another application custom API, not to mention creating another
-custom API at all.  This is maybe my favorite `_.template` technique but
+custom API at all. This is maybe my favorite `_.template` technique but
 has gone unnoticed by most.
 
 {% highlight javascript %}
@@ -152,8 +152,8 @@ var View = Backbone.View.extend({
 ### Further Reading
 
 This post actually turned out relatively small, which I think is a testament to
-the simplicity of `_.template`.  If you want to dig deeper I'd suggest reading
-[the source][underscorejs], as there really is no substitute.  :)
+the simplicity of `_.template`. If you want to dig deeper I'd suggest reading
+[the source][underscorejs], as there really is no substitute. :)
 
 [underscorejs]: http://underscorejs.org/underscore.js
 [backbone-view]: http://backbonejs.org#View
