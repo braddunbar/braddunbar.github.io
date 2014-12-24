@@ -307,8 +307,10 @@ article header time
   float: right; color: #aaa;
 }
 
-article audio
+article audio,
+article video
 {
+  max-width: 100%;
   display: block;
   margin: 0 auto 1em auto;
 }
