@@ -25,7 +25,7 @@ _.template('<p><%= text %></p>', {text: 'o hai!'});
 {% endhighlight %}
 
 The syntax is flexible so don't rage quit if you dislike `<%= %>`. You can
-just use different delimiters. Need to HTML escape your data?  No problem,
+just use different delimiters. Need to HTML escape your data? No problem,
 just use `<%- %>`.
 
 {% highlight javascript %}
