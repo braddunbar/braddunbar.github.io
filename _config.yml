@@ -2,6 +2,8 @@ safe: true
 title: 'Brad Dunbar'
 author: 'Brad Dunbar'
 description: 'Programming & Peanut Butter'
-url: 'http://braddunbar.net'
+url: 'https://braddunbar.net'
 permalink: '/:year/:month/:day/:title'
 markdown: 'kramdown'
+sass:
+  style: compressed
