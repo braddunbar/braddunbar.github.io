@@ -4,6 +4,5 @@ author: 'Brad Dunbar'
 description: 'Programming & Peanut Butter'
 url: 'https://braddunbar.net'
 permalink: '/:year/:month/:day/:title'
-markdown: 'kramdown'
 sass:
   style: compressed
