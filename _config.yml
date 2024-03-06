@@ -7,4 +7,4 @@ permalink: '/:year/:month/:day/:title'
 sass:
   style: compressed
 plugins:
-  - jekyll-feed:
+  - jekyll-feed
