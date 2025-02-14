@@ -17,8 +17,6 @@ dl,
 dt,
 dd,
 ol,
-ul,
-li,
 em,
 h1,
 h2,
@@ -29,8 +27,6 @@ h6,
 tt,
 nav,
 var,
-sub,
-sup,
 big,
 div,
 pre,
@@ -114,7 +110,6 @@ body
 }
 
 ol,
-ul
 {
   list-style: none;
 }
@@ -246,6 +241,14 @@ p
   margin: 0 0 1em 0;
   line-height: 1.5;
   font-size: 1.25em;
+}
+
+ul {
+  font-size: 1.25em;
+}
+
+ul > li {
+  margin-bottom: 0.5em;
 }
 
 p code
@@ -557,4 +560,8 @@ blockquote:before
 button
 {
   cursor: pointer;
+}
+
+sup a {
+  text-decoration: none;
 }
