@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "moduleResolution": "bundler",
+    "module": "es2022",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022",
+    "lib": ["DOM", "ES2022", "ESNext.Disposable"]
+  },
+  "include": ["**/*.tsx"]
+}
