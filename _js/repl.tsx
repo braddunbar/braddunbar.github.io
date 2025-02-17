@@ -6,7 +6,7 @@ import init, { Bradis, JsRespValue } from "bradis-web"
 
 await init()
 const bradis = Bradis.create()
-setInterval(() => { bradis.tick() }, 100)
+setInterval(() => { bradis.tick() }, 200)
 
 const RespValue = ({ value }: { value: JsRespValue }) => {
   switch (value.tag) {
