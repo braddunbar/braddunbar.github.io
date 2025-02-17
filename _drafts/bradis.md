@@ -2,10 +2,7 @@
 layout: default
 title: Bradis
 layout: post
-published: false
 ---
-
-<script type="module" src="/js/repl.js"></script>
 
 A few years ago, I needed a project. I had become consumed by a desire to use
 [Rust][rust], and I was trying to learn how to do complex things with it. Small
@@ -60,6 +57,8 @@ caveats<sup>[2](#wasm-caveats)</sup>, you can run Rust code in the browser. The
 repl below is Bradis running in the browser via WASM. Try out some Redis
 commands!
 
+<script type="module" src="/js/repl.js"></script>
+
 * `set x foo` - set a value
 * `get x` - get a value
 * `command list` - get a list of commands
@@ -98,11 +97,7 @@ Bradis:
   1000000 requests completed in 9.57 seconds
   20 parallel clients
   3 bytes payload
-  keep alive: 1
-  multi-thread: no
-
 …
-
 Summary:
   throughput summary: 104471.38 requests per second
   latency summary (msec):
@@ -118,11 +113,7 @@ C-Redis:
   1000000 requests completed in 5.73 seconds
   20 parallel clients
   3 bytes payload
-  keep alive: 1
-  host configuration "save": 3600 1 300 100 60 10000
-  host configuration "appendonly": no
-  multi-thread: no
-
+…
 Summary:
   throughput summary: 174581.00 requests per second
   latency summary (msec):
