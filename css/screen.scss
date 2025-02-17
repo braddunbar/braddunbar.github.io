@@ -565,3 +565,61 @@ button
 sup a {
   text-decoration: none;
 }
+
+.repl {
+  background-color: #444;
+  padding: 0.25em;
+}
+
+.repl-history {
+  border-bottom: solid 1px #fff;
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.5em;
+  height: 10em;
+  overflow: scroll;
+  margin-bottom: 0.25em;
+}
+
+.repl-input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-family: monospace;
+  font-size: 1.5em;
+  outline: none;
+  width: 100%;
+}
+
+.repl-history-command {
+  padding: 0.2em;
+}
+
+.repl-history-reply {
+  padding: 0.2em;
+}
+
+.repl-history ol {
+  counter-reset: list 0;
+  list-style: none;
+}
+
+.repl-history ol > li {
+  list-style: none;
+  padding: 0.25em;
+}
+
+.repl-history ol > li:before {
+  content: counter(list, decimal) ") ";
+  counter-increment: list;
+}
+
+.repl-history ol.push > li:before {
+  content: counter(list, decimal) "> ";
+  counter-increment: list;
+}
+
+.repl-history ol.map > li:before {
+  content: counter(list, decimal) "# ";
+  counter-increment: list;
+}

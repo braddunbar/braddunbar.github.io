@@ -1,5 +1,5 @@
 import { render } from 'preact'
-import { useRef } from 'preact/hooks'
+import { useEffect, useRef } from 'preact/hooks'
 import { useSignal, useSignalEffect } from '@preact/signals'
 import { produce } from 'immer'
 import init, { Bradis, JsRespValue } from "bradis-web"
@@ -18,14 +18,14 @@ const RespValue = ({ value }: { value: JsRespValue }) => {
     case 'error':
       return `(error) ${value.value}`
     case 'verbatim':
-      return <pre><code>{value.value.value}</code></pre>
+      return value.value.value
     case 'string':
       if (value.value === 'OK') return 'OK'
       return `"${value.value}"`
     case 'array':
     case 'push':
       return (
-        <ol>
+        <ol class={value.tag}>
           {value.value.length === 0 ?
             <li>(empty array)</li>
           :
@@ -39,7 +39,7 @@ const RespValue = ({ value }: { value: JsRespValue }) => {
       )
     case 'map':
       return (
-        <ol>
+        <ol class="map">
           {value.value.map(([key, value]) => (
             <li>
               <RespValue value={key} />
@@ -56,18 +56,25 @@ const Repl = () => {
   const input = useRef<HTMLInputElement>(null)
   const items = useSignal<(JsRespValue | string)[]>([])
   const command = useSignal<string>('')
+  const history = useRef<HTMLDivElement>(null)
+
+  function scroll() {
+    if (!history.current) return
+    history.current.scrollTop = history.current.scrollHeight
+  }
+
+  function run(value: string) {
+    items.value = produce(items.value, (items) => {
+      items.push(value)
+    })
+    client.write_inline(value)
+  }
 
   function onSubmit(event: Event) {
     event.preventDefault()
-    const element = input.current
-    if (!element) return
-
-    items.value = produce(items.value, (items) => {
-      items.push(element.value)
-    })
-
-    client.write_inline(element.value)
+    run(command.value)
     command.value = ''
+    scroll()
   }
 
   function onInput() {
@@ -89,28 +96,35 @@ const Repl = () => {
   })
 
   useSignalEffect(() => {
-    input.current?.focus()
+    if (items.value.length === 0) return
+    scroll()
   })
 
-  return (
-    <>
-      {items.value.map((item) => {
-        if (typeof item === 'string') {
-          return <div>{`> ${item}`}</div>
-        }
+  useEffect(() => {
+    run('hello 3')
+  }, [])
 
-        return (
-          <div>
-            <RespValue value={item} />
-          </div>
-        )
-      })}
+  return (
+    <div class="repl">
+      <div class="repl-history" ref={history} onClick={() => input.current?.focus()}>
+        {items.value.map((item) => {
+          if (typeof item === 'string') {
+            return <div class="repl-history-command">{`> ${item}`}</div>
+          }
+
+          return (
+            <div class="repl-history-reply">
+              <RespValue value={item} />
+            </div>
+          )
+        })}
+      </div>
       <form onSubmit={onSubmit}>
-        <input ref={input} type="text" onInput={onInput} value={command.value} required />
+        <input spellcheck={false} class="repl-input" ref={input} type="text" onInput={onInput} value={command.value} required />
       </form>
-    </>
+    </div>
   )
 }
 
-const root = document.querySelector('#root')
+const root = document.querySelector('#repl')
 if (root instanceof HTMLDivElement) render(<Repl />, root)
