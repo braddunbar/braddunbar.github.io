@@ -251,7 +251,7 @@ ul > li {
   margin-bottom: 0.5em;
 }
 
-p code
+p code, li code
 {
   padding: 0 .25em 0 .25em;
   background: #eee;
@@ -572,6 +572,8 @@ sup a {
   font-family: monospace;
   font-size: 1.5em;
   padding: 0.25em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 .repl-history {

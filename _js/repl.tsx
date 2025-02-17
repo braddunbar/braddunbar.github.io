@@ -1,12 +1,11 @@
 import { render } from 'preact'
-import { useEffect, useRef } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 import { useSignal, useSignalEffect } from '@preact/signals'
 import { produce } from 'immer'
 import init, { Bradis, JsRespValue } from "bradis-web"
 
 await init()
 const bradis = Bradis.create()
-const client = bradis.connect()
 setInterval(() => { bradis.tick() }, 100)
 
 const RespValue = ({ value }: { value: JsRespValue }) => {
@@ -24,6 +23,7 @@ const RespValue = ({ value }: { value: JsRespValue }) => {
       return `"${value.value}"`
     case 'array':
     case 'push':
+    case 'set':
       return (
         <ol class={value.tag}>
           {value.value.length === 0 ?
@@ -57,6 +57,7 @@ const Repl = () => {
   const items = useSignal<(JsRespValue | string)[]>([])
   const command = useSignal<string>('')
   const history = useRef<HTMLDivElement>(null)
+  const [client] = useState(() => bradis.connect())
 
   function scroll() {
     if (!history.current) return
@@ -127,5 +128,8 @@ const Repl = () => {
   )
 }
 
-const root = document.querySelector('#repl')
-if (root instanceof HTMLDivElement) render(<Repl />, root)
+const one = document.querySelector('#repl-one')
+if (one instanceof HTMLDivElement) render(<Repl />, one)
+
+const two = document.querySelector('#repl-two')
+if (two instanceof HTMLDivElement) render(<Repl />, two)
