@@ -42,14 +42,10 @@ I've gone a long way on my own but I think I want more now. I'd like to share
 it with someone. Get some feedback. Ask for help. Compare it to other people's
 understanding. Multiply the fun. Divide the despair.
 
-I'll be writing down all the things I've learned here. If you like them, or you
-don't like them, or they're wrong, or you have questions, <a
-href="https://hachyderm.io/@braddunbar" target="_blank">let me know</a>!
-
 I've been calling it Bradis, because it sounds like Redis. And I like the way
 it declares my existence. Brad is. (I am.)
 
-### What is it then?
+### WASM
 
 One of my favorite things about Rust is its support for compiling to [web
 assembly][wasm]. With a bit of work and a few
@@ -121,6 +117,25 @@ Summary:
         0.067     0.024     0.063     0.119     0.175     1.799
 ```
 
+### Repos
+
+Currently, Bradis exists as four repos. If you're curious about what's
+implemented and what isn't, this is the place to start!
+
+* [respite][respite] - An implementation of the [RESP protocol][resp]
+* [bradis][bradis] - This is where everything else lives - commands, store, db,
+  etc.
+* [bradis-server][bradis-server] - A server that listens for connections over
+  TCP.
+* [bradis-web][bradis-web] - A WASM build for running in the browser
+
+### That's it
+
+That's all I've got for now. I'll be writing down all the things I've learned
+here. If you like them, or you don't like them, or they're wrong, or you have
+questions, <a href="https://hachyderm.io/@braddunbar" target="_blank">let me
+know</a>!
+
 <hr>
 
 <span id="free-ish">1.</span> [License changes][license] notwithstanding.
@@ -136,3 +151,6 @@ or left out.
 [rust]: https://www.rust-lang.org/
 [wasm]: https://webassembly.org/
 [tokio]: https://tokio.rs/
+[bradis]: https://github.com/braddunbar/bradis
+[bradis-server]: https://github.com/braddunbar/bradis-server
+[bradis-web]: https://github.com/braddunbar/bradis-web
