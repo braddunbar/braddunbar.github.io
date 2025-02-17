@@ -154,7 +154,7 @@ hr
 .content
 {
   margin: 0 auto;
-  max-width: 37.5em;
+  max-width: 45em;
   padding-bottom: 2em;
 }
 
@@ -568,23 +568,34 @@ sup a {
 
 .repl {
   background-color: #444;
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.5em;
   padding: 0.25em;
 }
 
 .repl-history {
   border-bottom: solid 1px #fff;
-  color: #fff;
-  font-family: monospace;
-  font-size: 1.5em;
-  height: 10em;
+  height: 15em;
   overflow: scroll;
   margin-bottom: 0.25em;
 }
 
-.repl-input {
+.repl-prompt {
   color: #fff;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+.repl-form {
+  align-items: center;
+  display: flex;
+}
+
+.repl-input {
   background-color: transparent;
   border: none;
+  color: #fff;
   font-family: monospace;
   font-size: 1.5em;
   outline: none;

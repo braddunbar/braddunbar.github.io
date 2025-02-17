@@ -119,7 +119,8 @@ const Repl = () => {
           )
         })}
       </div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} class="repl-form">
+        <div class="repl-prompt">&gt;</div>
         <input spellcheck={false} class="repl-input" ref={input} type="text" onInput={onInput} value={command.value} required />
       </form>
     </div>
